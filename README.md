@@ -1,4 +1,4 @@
-# 🚀 poc-django-with-fastapi
+# django-with-fastapi-integration
 
 Unified **Django + FastAPI** project running under a single **ASGI** application using **Granian** and managed with **UV** and **Taskipy**.
 
@@ -6,7 +6,7 @@ This guide explains how to set up the project cleanly on **Linux**, **macOS**, a
 
 ---
 
-# 📦 **1. Install UV (Required)**
+# **1. Install UV (Required)**
 
 UV replaces Poetry/pipenv/virtualenv and provides extremely fast installs & isolated envs.
 
@@ -30,7 +30,7 @@ uv --version
 
 ---
 
-# 🐍 **2. Create & Activate the Virtual Environment**
+# **2. Create & Activate the Virtual Environment**
 
 Inside your project folder:
 
@@ -54,7 +54,7 @@ source .venv/bin/activate
 
 ---
 
-# 📥 **3. Install Dependencies**
+# **3. Install Dependencies**
 
 ```bash
 uv sync
@@ -64,7 +64,7 @@ This installs all project + dev dependencies defined in `pyproject.toml`.
 
 ---
 
-# ⚙️ **4. Project Commands (Taskipy)**
+# ⚙**4. Project Commands (Taskipy)**
 
 All commands are defined in:
 
@@ -92,7 +92,7 @@ uv run <task>
 
 ---
 
-# 🔥 **5. Start Development Servers**
+# **5. Start Development Servers**
 
 ### **Option A — Full ASGI (Granian)**
 
@@ -116,7 +116,7 @@ uv run uv
 
 ---
 
-# 🛠 **6. Database Operations**
+# **6. Database Operations**
 
 ### Create migrations:
 
@@ -132,7 +132,7 @@ uv run migrate
 
 ---
 
-# 📦 **7. Static Files**
+# **7. Static Files**
 
 ```bash
 uv run collectstatic
@@ -140,7 +140,7 @@ uv run collectstatic
 
 ---
 
-# 🧹 **8. Full Project Setup**
+# **8. Full Project Setup**
 
 Run all essential setup commands:
 
@@ -156,7 +156,7 @@ This will:
 
 ---
 
-# 🤝 **9. Project Structure Overview**
+# **9. Project Structure Overview**
 
 ```
 poc-django-with-fastapi/
@@ -176,7 +176,7 @@ Django + FastAPI are unified inside `config/asgi.py`.
 
 ---
 
-# 💡 **10. Notes**
+# **10. Notes**
 
 * Python **3.10–3.12** recommended
 * Granian currently **does not support Python 3.13**
@@ -218,6 +218,6 @@ Typical code patterns (see the actual files for exact code):
 
 Check those files directly for the exact prefixes and Granian call used in this project.
 
-# 🎉 Done!
+# Done!
 
 Your Django + FastAPI hybrid project is now fully configured using **UV**, **Taskipy**, and **Granian** for a modern, high-performance development experience.
