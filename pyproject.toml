@@ -1,0 +1,30 @@
+[project]
+name = "poc-django-with-fastapi"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "django>=5.2.8",
+    "fastapi>=0.122.0",
+    "granian>=2.6.0",
+    "starlette>=0.50.0",
+]
+
+[tool.taskipy.tasks]
+dev = "granian --interface asgi config.asgi:application --reload"
+django = "python manage.py runserver"
+uv = "uvicorn config.asgi:application --reload --loop asyncio"
+makemigrations = "python manage.py makemigrations"
+migrate = "python manage.py migrate"
+collectstatic = "python manage.py collectstatic --noinput"
+setup = """
+python manage.py makemigrations;
+python manage.py migrate;
+python manage.py collectstatic --noinput;
+"""
+
+[dependency-groups]
+dev = [
+    "taskipy>=1.14.1",
+]
